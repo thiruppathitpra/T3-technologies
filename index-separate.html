@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3 Technologies - IT & Digital Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-box">T3</div>
+                <span id="logo-text">T3 Technologies</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="nav-links" id="navLinks">
+                <a onclick="scrollToSection('hero')">Home</a>
+                <a onclick="scrollToSection('about')">About</a>
+                <a onclick="scrollToSection('services')">Services</a>
+                <a onclick="scrollToSection('portfolio')">Portfolio</a>
+                <a onclick="scrollToSection('why')">Why Choose Us</a>
+                <a onclick="scrollToSection('technologies')">Technologies</a>
+                <a onclick="scrollToSection('testimonials')">Testimonials</a>
+                <a onclick="scrollToSection('blog')">Blog</a>
+                <a onclick="scrollToSection('careers')">Careers</a>
+                <a onclick="scrollToSection('contact')">Contact</a>
+            </div>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+                <button class="menu-btn" id="menuBtn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a onclick="scrollToSection('hero')">Home</a>
+            <a onclick="scrollToSection('about')">About</a>
+            <a onclick="scrollToSection('services')">Services</a>
+            <a onclick="scrollToSection('portfolio')">Portfolio</a>
+            <a onclick="scrollToSection('why')">Why Choose Us</a>
+            <a onclick="scrollToSection('technologies')">Technologies</a>
+            <a onclick="scrollToSection('testimonials')">Testimonials</a>
+            <a onclick="scrollToSection('blog')">Blog</a>
+            <a onclick="scrollToSection('careers')">Careers</a>
+            <a onclick="scrollToSection('contact')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-background">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-badge">Welcome to the Future of Technology</div>
+            <h1>Empowering Businesses with Smart IT & Digital Solutions</h1>
+            <p>We build custom software, websites, mobile applications, AI automation, cloud solutions, and digital marketing strategies that help businesses grow faster.</p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Get Free Consultation</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('services')">View Services</button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="projectCount">250</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="clientCount">180</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="teamCount">45</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About T3 Technologies</h2>
+            <p class="section-subtitle">A trusted technology partner delivering innovative software, web, AI, cloud, and digital marketing solutions</p>
+
+            <div class="grid-2">
+                <div class="card mission-card">
+                    <h3>Our Mission</h3>
+                    <p>Helping businesses grow through innovative and affordable technology.</p>
+                    <p>We believe that technology should be accessible to businesses of all sizes. Our mission is to provide cutting-edge solutions that empower entrepreneurs, startups, SMEs, and enterprises to scale their operations and achieve their goals.</p>
+                </div>
+
+                <div class="card mission-card">
+                    <h3>Our Vision</h3>
+                    <p>To become one of India's leading technology solution providers.</p>
+                    <p>We aspire to be the most trusted and innovative technology partner, known for delivering exceptional solutions, maintaining the highest standards of quality, and fostering long-term relationships with our clients globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive solutions for your digital transformation</p>
+
+            <div class="grid-4">
+                <div class="card service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Custom Software Development</h3>
+                    <p>Enterprise-grade solutions tailored to your needs</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Website Design & Development</h3>
+                    <p>Modern, responsive, conversion-focused websites</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>iOS and Android apps with native performance</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">📢</div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic campaigns to boost your brand</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Meta Ads Management</h3>
+                    <p>Optimized Facebook and Instagram campaigns</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Google Ads Management</h3>
+                    <p>High-ROI search and display advertising</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Search Engine Optimization</h3>
+                    <p>Rank higher and drive organic traffic</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Chatbots</h3>
+                    <p>24/7 customer engagement automation</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>AI Agents & Automation</h3>
+                    <p>Intelligent automation for your business</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>WhatsApp Business Automation</h3>
+                    <p>Streamline customer communication</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>CRM Development</h3>
+                    <p>Custom customer relationship management</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>ERP Solutions</h3>
+                    <p>Integrated enterprise resource planning</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, intuitive user experiences</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable, secure cloud infrastructure</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Linux Server Administration</h3>
+                    <p>Reliable server management & optimization</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Website Maintenance</h3>
+                    <p>Ongoing support and updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <p class="section-subtitle">Reasons why businesses trust T3 Technologies</p>
+
+            <div class="grid-3">
+                <div class="card why-card">
+                    <div class="why-number">1</div>
+                    <h3>Experienced Professionals</h3>
+                    <p>Team of certified experts with 10+ years of experience</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-number">2</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates without compromising quality</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-number">3</div>
+                    <h3>Fast Project Delivery</h3>
+                    <p>On-time delivery without quality compromise</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-number">4</div>
+                    <h3>Secure & Scalable Solutions</h3>
+                    <p>Enterprise-grade security and scalability</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-number">5</div>
+                    <h3>Dedicated Support</h3>
+                    <p>24/7 customer support and maintenance</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-number">6</div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>98% client satisfaction and retention rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p class="section-subtitle">Showcase of our recent projects and success stories</p>
+
+            <div class="grid-4">
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">🏘️</div>
+                    <h3>Real Estate Marketing Website</h3>
+                    <p>Web Development</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">🏢</div>
+                    <h3>Business Website</h3>
+                    <p>Web Design</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">🛒</div>
+                    <h3>E-Commerce Store</h3>
+                    <p>E-Commerce</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">📊</div>
+                    <h3>CRM Software</h3>
+                    <p>Custom Software</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">📈</div>
+                    <h3>ERP Dashboard</h3>
+                    <p>Enterprise</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">🤖</div>
+                    <h3>AI Chatbot Platform</h3>
+                    <p>AI Solutions</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">🎯</div>
+                    <h3>Landing Page</h3>
+                    <p>Marketing</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image">📱</div>
+                    <h3>Mobile App</h3>
+                    <p>Mobile</p>
+                    <div class="portfolio-link">View Project →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies">
+        <div class="container">
+            <h2>Technologies We Use</h2>
+            <p class="section-subtitle">Latest tools and frameworks for modern solutions</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 24px;">
+                <div class="card tech-card">
+                    <div class="tech-icon">📄</div>
+                    <p>HTML5</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🎨</div>
+                    <p>CSS3</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <p>JavaScript</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">⚛️</div>
+                    <p>React</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🟢</div>
+                    <p>Node.js</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🐍</div>
+                    <p>Python</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🐘</div>
+                    <p>PHP</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🔴</div>
+                    <p>Laravel</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🗄️</div>
+                    <p>MySQL</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🍃</div>
+                    <p>MongoDB</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <p>AWS</p>
+                </div>
+                <div class="card tech-card">
+                    <div class="tech-icon">🐳</div>
+                    <p>Docker</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <div class="container">
+            <h2>Our Process</h2>
+            <p class="section-subtitle">Streamlined approach to deliver excellence</p>
+
+            <div class="grid-4 process-grid">
+                <div class="card process-step">
+                    <div class="step-number">1</div>
+                    <h3>Requirement Analysis</h3>
+                    <p>Understanding your vision and requirements</p>
+                    <div class="process-arrow">→</div>
+                </div>
+                <div class="card process-step">
+                    <div class="step-number">2</div>
+                    <h3>Planning</h3>
+                    <p>Strategic roadmap and timeline</p>
+                    <div class="process-arrow">→</div>
+                </div>
+                <div class="card process-step">
+                    <div class="step-number">3</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting beautiful user experiences</p>
+                    <div class="process-arrow">→</div>
+                </div>
+                <div class="card process-step">
+                    <div class="step-number">4</div>
+                    <h3>Development</h3>
+                    <p>Building robust solutions</p>
+                </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 24px;">
+                <div class="card process-step">
+                    <div class="step-number">5</div>
+                    <h3>Testing</h3>
+                    <p>Quality assurance and optimization</p>
+                </div>
+                <div class="card process-step">
+                    <div class="step-number">6</div>
+                    <h3>Deployment</h3>
+                    <p>Launching to production</p>
+                </div>
+                <div class="card process-step">
+                    <div class="step-number">7</div>
+                    <h3>Support & Maintenance</h3>
+                    <p>Ongoing support and improvements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p class="section-subtitle">Real feedback from satisfied clients</p>
+
+            <div class="grid-3">
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"T3 Technologies delivered our e-commerce platform ahead of schedule. Their team is professional and solution-oriented."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Rajesh Sharma</div>
+                        <div class="testimonial-company">TechStart India</div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Excellent digital marketing strategies. Our ROI increased by 300% within 3 months. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Priya Patel</div>
+                        <div class="testimonial-company">Digital Marketing Pro</div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Their custom ERP solution transformed our business operations. Outstanding support and quality delivery."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Vikram Singh</div>
+                        <div class="testimonial-company">Enterprise Solutions Ltd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <p class="section-subtitle">Insights and updates on technology and business</p>
+
+            <div class="grid-3">
+                <div class="card blog-card">
+                    <div class="blog-category">ARTIFICIAL INTELLIGENCE</div>
+                    <h3>AI Revolution in 2024: What Businesses Should Know</h3>
+                    <p class="blog-date">Mar 15, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+
+                <div class="card blog-card">
+                    <div class="blog-category">DIGITAL MARKETING</div>
+                    <h3>Digital Marketing Trends That Will Dominate 2024</h3>
+                    <p class="blog-date">Mar 10, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+
+                <div class="card blog-card">
+                    <div class="blog-category">SEO</div>
+                    <h3>SEO Best Practices for Higher Rankings</h3>
+                    <p class="blog-date">Mar 5, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+
+                <div class="card blog-card">
+                    <div class="blog-category">WEB DEVELOPMENT</div>
+                    <h3>React 18: What Changed and Why It Matters</h3>
+                    <p class="blog-date">Feb 28, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+
+                <div class="card blog-card">
+                    <div class="blog-category">CLOUD COMPUTING</div>
+                    <h3>Cloud Computing: The Future of Business Infrastructure</h3>
+                    <p class="blog-date">Feb 20, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+
+                <div class="card blog-card">
+                    <div class="blog-category">SOFTWARE TRENDS</div>
+                    <h3>Emerging Software Development Trends</h3>
+                    <p class="blog-date">Feb 15, 2024</p>
+                    <div class="blog-link">Read More →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <div class="container">
+            <div class="card cta-card">
+                <h2>Let's Build Your Next Digital Solution</h2>
+                <p>Ready to transform your business? Let's discuss your project and create something amazing together.</p>
+                <button class="btn btn-primary">Start Your Project</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="card" style="padding: 32px;">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message ✉️</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="card contact-info-item">
+                        <span class="contact-icon">☎️</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="card contact-info-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@t3technologies.com</p>
+                        </div>
+                    </div>
+
+                    <div class="card contact-info-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Tech Street, Innovation Hub, Delhi, India 110001</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="padding: 24px;">
+                        <h4 style="margin-bottom: 16px;">Follow Us</h4>
+                        <div class="social-links">
+                            <button class="social-btn" title="Facebook">f</button>
+                            <button class="social-btn" title="LinkedIn">in</button>
+                            <button class="social-btn" title="Twitter">tw</button>
+                            <button class="social-btn" title="Instagram">ig</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section (Placeholder) -->
+    <section id="careers" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(0, 194, 168, 0.05));">
+        <div class="container" style="text-align: center;">
+            <h2>Join Our Team</h2>
+            <p class="section-subtitle">We're always looking for talented and passionate professionals</p>
+            <p style="margin-bottom: 32px; max-width: 640px; margin-left: auto; margin-right: auto;">
+                Be part of a dynamic team that's transforming the digital landscape. We offer competitive salaries, growth opportunities, and a collaborative work environment.
+            </p>
+            <button class="btn btn-primary">View Open Positions</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                        <div class="logo-box">T3</div>
+                        <span style="font-weight: bold;">T3 Technologies</span>
+                    </div>
+                    <p>Your trusted technology partner for digital transformation.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">AI Solutions</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for latest updates and insights.</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 T3 Technologies Software Solutions. All rights reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/91555123456" class="whatsapp-btn" title="Chat on WhatsApp" target="_blank">💬</a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()" title="Scroll to top">↑</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
