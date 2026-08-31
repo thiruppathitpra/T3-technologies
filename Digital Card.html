@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="T3 Technologies Software Solutions - Thiruppathi Jayavel">
+    <meta name="theme-color" content="#0F172A">
+    <title>T3 Technologies - Thiruppathi Jayavel | Digital Business Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1a2847 50%, #0d1b2a 100%);
+            color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background-attachment: fixed;
+            font-size: 16px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card-container {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 24px;
+        }
+
+        .company-logo {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #06B6D4;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .company-name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #d4d8e8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: 12px;
+            font-weight: 500;
+            color: #06B6D4;
+            letter-spacing: 0.3px;
+            line-height: 1.5;
+        }
+
+        /* Contact Info Display */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            word-break: break-all;
+        }
+
+        .info-icon {
+            font-size: 16px;
+            min-width: 20px;
+            opacity: 0.8;
+        }
+
+        .info-text {
+            color: #d4d8e8;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        /* Contact Actions Section */
+        .contact-section {
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #f8f9fa;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            backdrop-filter: blur(4px);
+            white-space: nowrap;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn:hover {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: rgba(6, 182, 212, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+        }
+
+        .contact-btn:active {
+            transform: translateY(0);
+            background: rgba(6, 182, 212, 0.25);
+        }
+
+        .contact-btn:focus-visible {
+            outline: 2px solid #06B6D4;
+            outline-offset: 2px;
+        }
+
+        .contact-btn-icon {
+            font-size: 14px;
+            display: inline-block;
+            min-width: 16px;
+        }
+
+        .contact-btn-full {
+            grid-column: 1 / -1;
+        }
+
+        .btn-secondary {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: rgba(6, 182, 212, 0.5);
+        }
+
+        /* Description Section */
+        .description-section {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
+        }
+
+        .description-title {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #06B6D4;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .description-text {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #d4d8e8;
+            font-weight: 400;
+        }
+
+        /* Website Section */
+        .website-section {
+            margin-bottom: 20px;
+        }
+
+        .website-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #06B6D4;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .website-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(6, 182, 212, 0.05));
+            border: 1.5px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #f8f9fa;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            cursor: pointer;
+        }
+
+        .website-link:hover {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.1));
+            border-color: rgba(6, 182, 212, 0.5);
+            transform: translateX(4px);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+        }
+
+        .website-link:active {
+            transform: translateX(2px);
+        }
+
+        .website-link:focus-visible {
+            outline: 2px solid #06B6D4;
+            outline-offset: 2px;
+        }
+
+        .website-icon {
+            font-size: 24px;
+            min-width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .website-content {
+            flex: 1;
+        }
+
+        .website-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: #f8f9fa;
+        }
+
+        .website-url {
+            font-size: 11px;
+            color: #a0aec0;
+            word-break: break-word;
+        }
+
+        .website-arrow {
+            font-size: 18px;
+            color: #06B6D4;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .website-link:hover .website-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        /* QR Code Section */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(4px);
+        }
+
+        .qr-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #06B6D4;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+
+        .qr-code-placeholder {
+            width: 160px;
+            height: 160px;
+            background: white;
+            border: 2px solid #06B6D4;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #0F172A;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .qr-note {
+            font-size: 9px;
+            color: #a0aec0;
+            margin-top: 8px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-company {
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: #f8f9fa;
+        }
+
+        .footer-copyright {
+            font-size: 9px;
+            color: #64748b;
+            opacity: 0.7;
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(6, 182, 212, 0.9);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            animation: slideUp 0.3s ease-out;
+            z-index: 1000;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .card-container {
+                padding: 32px 20px;
+                border-radius: 20px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .company-name {
+                font-size: 16px;
+            }
+
+            .contact-btn {
+                padding: 11px 12px;
+                font-size: 10px;
+            }
+
+            .contact-grid {
+                gap: 8px;
+            }
+
+            .qr-code-placeholder {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 12px;
+            }
+
+            .card-container {
+                padding: 28px 18px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+
+            .title {
+                font-size: 11px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .contact-btn {
+                padding: 10px 12px;
+                font-size: 9.5px;
+            }
+
+            .contact-info {
+                font-size: 12px;
+                gap: 8px;
+                padding: 12px;
+            }
+
+            .info-item {
+                gap: 10px;
+            }
+
+            .website-link {
+                padding: 14px;
+            }
+
+            .website-icon {
+                font-size: 20px;
+            }
+
+            .website-title {
+                font-size: 12px;
+            }
+
+            .website-url {
+                font-size: 10px;
+            }
+
+            .qr-code-placeholder {
+                width: 130px;
+                height: 130px;
+                font-size: 11px;
+            }
+
+            .header {
+                margin-bottom: 20px;
+                padding-bottom: 18px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .card-container {
+                padding: 24px 16px;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .company-name {
+                font-size: 15px;
+            }
+
+            .contact-btn {
+                padding: 9px 10px;
+                font-size: 9px;
+            }
+
+            .qr-code-placeholder {
+                width: 120px;
+                height: 120px;
+                font-size: 10px;
+            }
+        }
+
+        /* Desktop Optimization */
+        @media (min-width: 1024px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            .card-container {
+                padding: 50px 40px;
+            }
+
+            .contact-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 32px rgba(6, 182, 212, 0.3);
+            }
+
+            .name {
+                font-size: 32px;
+            }
+
+            .company-name {
+                font-size: 22px;
+            }
+
+            .contact-btn {
+                padding: 14px 18px;
+                font-size: 12px;
+            }
+
+            .qr-code-placeholder {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #0F172A 0%, #1a2847 50%, #0d1b2a 100%);
+            }
+        }
+
+        /* Light Mode Support */
+        @media (prefers-color-scheme: light) {
+            body {
+                background: linear-gradient(135deg, #f0f4f8 0%, #d9e8f5 50%, #e8f0fa 100%);
+            }
+
+            .card-container {
+                background: rgba(255, 255, 255, 0.9);
+                border-color: rgba(6, 182, 212, 0.2);
+            }
+
+            .name, .company-name, .title, .description-text, .footer-company {
+                color: #1a2847;
+            }
+
+            .company-logo, .title, .description-title, .qr-label {
+                color: #0891b2;
+            }
+
+            .contact-btn {
+                background: rgba(6, 182, 212, 0.08);
+                border-color: rgba(6, 182, 212, 0.2);
+                color: #0f172a;
+            }
+
+            .contact-btn:hover {
+                background: rgba(6, 182, 212, 0.15);
+                border-color: rgba(6, 182, 212, 0.4);
+            }
+
+            .contact-info, .description-section, .qr-section {
+                background: rgba(6, 182, 212, 0.05);
+                border-color: rgba(6, 182, 212, 0.15);
+            }
+
+            .info-text, .description-text {
+                color: #334155;
+            }
+
+            .website-link {
+                background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(6, 182, 212, 0.08));
+                border-color: rgba(6, 182, 212, 0.3);
+                color: #0f172a;
+            }
+
+            .website-link:hover {
+                background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(6, 182, 212, 0.15));
+                border-color: rgba(6, 182, 212, 0.5);
+            }
+
+            .website-title {
+                color: #0f172a;
+            }
+
+            .website-url {
+                color: #64748b;
+            }
+
+            .footer-copyright {
+                color: #78909c;
+            }
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            .card-container {
+                animation: none;
+                opacity: 1;
+            }
+
+            .contact-btn {
+                transition: none;
+            }
+
+            .contact-btn:hover {
+                transform: none;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .card-container {
+                box-shadow: none;
+                background: white;
+            }
+
+            .contact-btn {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card-container">
+            <!-- Header Section -->
+            <div class="header">
+                <div class="company-logo">T3 Technologies</div>
+                <div class="company-name">Software Solutions</div>
+                <div class="name">Thiruppathi Jayavel</div>
+                <div class="title">Founder | Digital & Software Solutions</div>
+            </div>
+
+            <!-- Contact Info Display -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="info-icon">📱</span>
+                    <span class="info-text">+91 93445 96772</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <span class="info-text">t3technologiessolutions@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- Contact Actions Section -->
+            <div class="contact-section">
+                <div class="contact-grid">
+                    <a href="tel:+919344596772" class="contact-btn" title="Call">
+                        <span class="contact-btn-icon">📞</span>
+                        <span>Call</span>
+                    </a>
+                    <a href="https://wa.me/919344596772?text=Hi%20Thiruppathi" class="contact-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                        <span class="contact-btn-icon">💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:t3technologiessolutions@gmail.com?subject=Inquiry%20from%20Digital%20Card" class="contact-btn" title="Email">
+                        <span class="contact-btn-icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://thiruppathitpra.github.io/T3-technologies/" class="contact-btn" target="_blank" rel="noopener noreferrer" title="Visit Website">
+                        <span class="contact-btn-icon">🌐</span>
+                        <span>Website</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thiruppathi-jayavel" class="contact-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                        <span class="contact-btn-icon">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.youtube.com/@T3TechnologiesSoftwareSolution" class="contact-btn" target="_blank" rel="noopener noreferrer" title="YouTube Channel">
+                        <span class="contact-btn-icon">▶️</span>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/LUpWCjsTHSxMu1fLA" class="contact-btn contact-btn-full" target="_blank" rel="noopener noreferrer" title="Office Location">
+                        <span class="contact-btn-icon">📍</span>
+                        <span>Office Location</span>
+                    </a>
+                    <button type="button" class="contact-btn contact-btn-full btn-secondary" onclick="downloadVCard()" title="Save Contact">
+                        <span class="contact-btn-icon">👤</span>
+                        <span>Save Contact</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section">
+                <div class="description-title">About</div>
+                <div class="description-text">
+                    T3 Technologies Software Solutions provides professional digital, software and technology solutions for businesses.
+                </div>
+            </div>
+
+            <!-- Website Section -->
+            <div class="website-section">
+                <div class="website-label">Online Presence</div>
+                <a href="https://thiruppathitpra.github.io/T3-technologies/" class="website-link" target="_blank" rel="noopener noreferrer" title="Visit T3 Technologies Website">
+                    <span class="website-icon">🌐</span>
+                    <div class="website-content">
+                        <div class="website-title">Visit Our Website</div>
+                        <div class="website-url">thiruppathitpra.github.io/T3-technologies</div>
+                    </div>
+                    <span class="website-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <div class="qr-label">Scan to Connect</div>
+                <div class="qr-code-placeholder">
+                    [QR Code]
+                </div>
+                <div class="qr-note">
+                    Generate with this card's published URL
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-company">T3 Technologies Software Solutions</div>
+                <div class="footer-copyright">© 2024 All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // vCard Download Function
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Thiruppathi Jayavel
+N:Jayavel;Thiruppathi;;;
+ORG:T3 Technologies Software Solutions
+TITLE:Founder | Digital & Software Solutions
+TEL:+919344596772
+EMAIL:t3technologiessolutions@gmail.com
+URL:https://thiruppathitpra.github.io/T3-technologies/
+PROFILE:https://www.linkedin.com/in/thiruppathi-jayavel
+SOCIAL:https://www.youtube.com/@T3TechnologiesSoftwareSolution
+NOTE:T3 Technologies Software Solutions provides professional digital, software and technology solutions for businesses.
+END:VCARD`;
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard));
+            element.setAttribute('download', 'Thiruppathi_Jayavel_T3_Technologies.vcf');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+
+            // Show success toast
+            showToast('Contact saved! File will download.');
+        }
+
+        // Toast Notification Function
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideUp 0.3s ease-out reverse';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 2000);
+        }
+
+        // Copy to Clipboard Function for Contact Info
+        function copyToClipboard(text, label) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`${label} copied!`);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(`${label} copied!`);
+            });
+        }
+
+        // Make contact info clickable/copyable
+        document.querySelectorAll('.info-item').forEach(item => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function() {
+                const text = this.querySelector('.info-text').textContent.trim();
+                const icon = this.querySelector('.info-icon').textContent;
+                const label = icon === '📱' ? 'Phone' : 'Email';
+                copyToClipboard(text, label);
+            });
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (document.activeElement.classList.contains('contact-btn')) {
+                    document.activeElement.click();
+                }
+            }
+        });
+
+        // Detect if on mobile device
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Welcome message on load
+        window.addEventListener('load', () => {
+            if (isMobileDevice()) {
+                console.log('Mobile device detected - optimized layout active');
+            }
+        });
+    </script>
+</body>
+</html>
