@@ -1,1210 +1,483 @@
-/* =========================================================
-   T3 TECHNOLOGIES - DIGITAL BUSINESS CARD
-   File: digital card.css
-   ========================================================= */
+<!DOCTYPE html>
 
-/* ---------- RESET ---------- */
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
+```
+<meta name="description"
+      content="T3 Technologies Software Solutions - Thiruppathi Jayavel">
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
+<meta name="theme-color" content="#0F172A">
+
+<title>
+    T3 Technologies - Thiruppathi Jayavel | Digital Business Card
+</title>
+
+<!-- Separate CSS File -->
+<link rel="stylesheet" href="digital card.css">
+```
+
+</head>
+
+<body>
+
+```
+<div class="wrapper">
+
+    <div class="card-container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="header">
+
+            <div class="company-logo">
+                T3 Technologies
+            </div>
+
+            <div class="company-name">
+                Software Solutions
+            </div>
+
+            <div class="name">
+                Thiruppathi Jayavel
+            </div>
+
+            <div class="title">
+                Founder | Digital & Software Solutions
+            </div>
+
+        </div>
 
 
-/* ---------- BODY ---------- */
+        <!-- ================= CONTACT INFORMATION ================= -->
 
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Helvetica Neue",
-        sans-serif;
+        <div class="contact-info">
 
-    background:
-        linear-gradient(
-            135deg,
-            #0F172A 0%,
-            #1a2847 50%,
-            #0d1b2a 100%
+            <div class="info-item"
+                 onclick="copyToClipboard('+91 93445 96772', 'Phone')">
+
+                <span class="info-icon">📱</span>
+
+                <span class="info-text">
+                    +91 93445 96772
+                </span>
+
+            </div>
+
+
+            <div class="info-item"
+                 onclick="copyToClipboard(
+                    't3technologiessolutions@gmail.com',
+                    'Email'
+                 )">
+
+                <span class="info-icon">✉️</span>
+
+                <span class="info-text">
+                    t3technologiessolutions@gmail.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CONTACT BUTTONS ================= -->
+
+        <div class="contact-section">
+
+            <div class="contact-grid">
+
+                <!-- Call -->
+
+                <a href="tel:+919344596772"
+                   class="contact-btn"
+                   title="Call">
+
+                    <span class="contact-btn-icon">
+                        📞
+                    </span>
+
+                    <span>
+                        Call
+                    </span>
+
+                </a>
+
+
+                <!-- WhatsApp -->
+
+                <a href="https://wa.me/919344596772?text=Hi%20Thiruppathi"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="WhatsApp">
+
+                    <span class="contact-btn-icon">
+                        💬
+                    </span>
+
+                    <span>
+                        WhatsApp
+                    </span>
+
+                </a>
+
+
+                <!-- Email -->
+
+                <a href="mailto:t3technologiessolutions@gmail.com?subject=Inquiry%20from%20Digital%20Card"
+                   class="contact-btn"
+                   title="Email">
+
+                    <span class="contact-btn-icon">
+                        ✉️
+                    </span>
+
+                    <span>
+                        Email
+                    </span>
+
+                </a>
+
+
+                <!-- Website -->
+
+                <a href="https://thiruppathitpra.github.io/T3-technologies/"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Website">
+
+                    <span class="contact-btn-icon">
+                        🌐
+                    </span>
+
+                    <span>
+                        Website
+                    </span>
+
+                </a>
+
+
+                <!-- LinkedIn -->
+
+                <a href="https://www.linkedin.com/in/thiruppathi-jayavel"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="LinkedIn">
+
+                    <span class="contact-btn-icon">
+                        💼
+                    </span>
+
+                    <span>
+                        LinkedIn
+                    </span>
+
+                </a>
+
+
+                <!-- YouTube -->
+
+                <a href="https://www.youtube.com/@T3TechnologiesSoftwareSolution"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="YouTube">
+
+                    <span class="contact-btn-icon">
+                        ▶️
+                    </span>
+
+                    <span>
+                        YouTube
+                    </span>
+
+                </a>
+
+
+                <!-- Office Location -->
+
+                <a href="https://maps.app.goo.gl/LUpWCjsTHSxMu1fLA"
+                   class="contact-btn contact-btn-full"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Office Location">
+
+                    <span class="contact-btn-icon">
+                        📍
+                    </span>
+
+                    <span>
+                        Office Location
+                    </span>
+
+                </a>
+
+
+                <!-- Save Contact -->
+
+                <button type="button"
+                        class="contact-btn contact-btn-full btn-secondary"
+                        onclick="downloadVCard()"
+                        title="Save Contact">
+
+                    <span class="contact-btn-icon">
+                        👤
+                    </span>
+
+                    <span>
+                        Save Contact
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <div class="description-section">
+
+            <div class="description-title">
+                About
+            </div>
+
+            <div class="description-text">
+
+                T3 Technologies Software Solutions provides
+                professional digital, software and technology
+                solutions for businesses.
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= WEBSITE ================= -->
+
+        <div class="website-section">
+
+            <div class="website-label">
+                Online Presence
+            </div>
+
+            <a href="https://thiruppathitpra.github.io/T3-technologies/"
+               class="website-link"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="website-icon">
+                    🌐
+                </span>
+
+                <div class="website-content">
+
+                    <div class="website-title">
+                        Visit Our Website
+                    </div>
+
+                    <div class="website-url">
+                        thiruppathitpra.github.io/T3-technologies
+                    </div>
+
+                </div>
+
+                <span class="website-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- ================= QR CODE ================= -->
+
+        <div class="qr-section">
+
+            <div class="qr-label">
+                Scan to Connect
+            </div>
+
+            <div class="qr-code-placeholder">
+
+                <div>
+                    QR<br>
+                    CODE
+                </div>
+
+            </div>
+
+            <div class="qr-note">
+                Generate QR code using the published digital card URL.
+            </div>
+
+        </div>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <div class="footer">
+
+            <div class="footer-company">
+                T3 Technologies Software Solutions
+            </div>
+
+            <div class="footer-copyright">
+                © 2026 All rights reserved.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* Save Contact */
+
+    function downloadVCard() {
+
+        const vcard =
+```
+
+`BEGIN:VCARD
+VERSION:3.0
+FN:Thiruppathi Jayavel
+N:Jayavel;Thiruppathi;;;
+ORG:T3 Technologies Software Solutions
+TITLE:Founder | Digital & Software Solutions
+TEL:+919344596772
+EMAIL:t3technologiessolutions@gmail.com
+URL:https://thiruppathitpra.github.io/T3-technologies/
+PROFILE:https://www.linkedin.com/in/thiruppathi-jayavel
+NOTE:T3 Technologies Software Solutions provides professional digital, software and technology solutions for businesses.
+END:VCARD`;
+
+```
+        const element = document.createElement("a");
+
+        element.setAttribute(
+            "href",
+            "data:text/vcard;charset=utf-8," +
+            encodeURIComponent(vcard)
         );
 
-    color: #f8f9fa;
-
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 16px;
-
-    background-attachment: fixed;
-
-    font-size: 16px;
-}
-
-
-/* ---------- MAIN WRAPPER ---------- */
-
-.wrapper {
-    width: 100%;
-    max-width: 450px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 16px;
-}
-
-
-/* ---------- BUSINESS CARD ---------- */
-
-.card-container {
-    width: 100%;
-
-    background: rgba(15, 23, 42, 0.80);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    border-radius: 24px;
-
-    padding: 40px 28px;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.40),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
-
-    animation: cardSlideIn 0.6s ease-out;
-}
-
-
-/* ---------- CARD ANIMATION ---------- */
-
-@keyframes cardSlideIn {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.header {
-    text-align: center;
-
-    margin-bottom: 28px;
-
-    padding-bottom: 24px;
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.10);
-}
-
-
-/* Company Small Name */
-
-.company-logo {
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    color: #06B6D4;
-
-    text-transform: uppercase;
-
-    margin-bottom: 6px;
-
-    opacity: 0.9;
-}
-
-
-/* Company Name */
-
-.company-name {
-    font-size: 18px;
-
-    font-weight: 700;
-
-    line-height: 1.2;
-
-    margin-bottom: 14px;
-
-    letter-spacing: -0.3px;
-}
-
-
-/* Person Name */
-
-.name {
-    font-size: 26px;
-
-    font-weight: 700;
-
-    margin-bottom: 6px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f8f9fa 0%,
-            #d4d8e8 100%
+        element.setAttribute(
+            "download",
+            "Thiruppathi_Jayavel_T3_Technologies.vcf"
         );
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        element.style.display = "none";
 
-    background-clip: text;
+        document.body.appendChild(element);
 
-    line-height: 1.2;
-}
+        element.click();
 
+        document.body.removeChild(element);
 
-/* Designation */
+        showToast("Contact saved! File will download.");
 
-.title {
-    font-size: 12px;
-
-    font-weight: 500;
-
-    color: #06B6D4;
-
-    letter-spacing: 0.3px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   CONTACT INFORMATION
-   ========================================================= */
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-
-    margin-bottom: 24px;
-
-    padding: 16px;
-
-    background:
-        rgba(255, 255, 255, 0.05);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 12px;
-
-    font-size: 13px;
-}
-
-
-.info-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    word-break: break-word;
-
-    cursor: pointer;
-
-    transition: opacity 0.2s ease;
-}
-
-
-.info-item:hover {
-    opacity: 0.85;
-}
-
-
-.info-icon {
-    font-size: 16px;
-
-    min-width: 20px;
-
-    opacity: 0.8;
-}
-
-
-.info-text {
-    color: #d4d8e8;
-
-    font-weight: 400;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   CONTACT BUTTONS
-   ========================================================= */
-
-.contact-section {
-    margin-bottom: 20px;
-}
-
-
-.contact-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
-
-    margin-bottom: 10px;
-}
-
-
-.contact-btn {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 6px;
-
-    padding: 12px 14px;
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.15);
-
-    border-radius: 12px;
-
-    color: #f8f9fa;
-
-    text-decoration: none;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        all 0.3s
-        cubic-bezier(
-            0.23,
-            1,
-            0.320,
-            1
-        );
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    white-space: nowrap;
-
-    touch-action: manipulation;
-
-    user-select: none;
-    -webkit-user-select: none;
-
-    flex-wrap: wrap;
-}
-
-
-/* Button Hover */
-
-.contact-btn:hover {
-    background:
-        rgba(6, 182, 212, 0.15);
-
-    border-color:
-        rgba(6, 182, 212, 0.40);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 24px
-        rgba(6, 182, 212, 0.20);
-}
-
-
-/* Button Click */
-
-.contact-btn:active {
-    transform: translateY(0);
-
-    background:
-        rgba(6, 182, 212, 0.25);
-}
-
-
-/* Keyboard Focus */
-
-.contact-btn:focus-visible {
-    outline:
-        2px solid #06B6D4;
-
-    outline-offset: 2px;
-}
-
-
-/* Button Icon */
-
-.contact-btn-icon {
-    font-size: 14px;
-
-    display: inline-block;
-
-    min-width: 16px;
-}
-
-
-/* Full Width Button */
-
-.contact-btn-full {
-    grid-column: 1 / -1;
-}
-
-
-/* Save Contact Button */
-
-.btn-secondary {
-    background:
-        rgba(6, 182, 212, 0.10);
-
-    border-color:
-        rgba(6, 182, 212, 0.30);
-}
-
-
-.btn-secondary:hover {
-    background:
-        rgba(6, 182, 212, 0.20);
-
-    border-color:
-        rgba(6, 182, 212, 0.50);
-}
-
-
-/* =========================================================
-   ABOUT SECTION
-   ========================================================= */
-
-.description-section {
-    margin-bottom: 20px;
-
-    padding: 16px;
-
-    background:
-        rgba(255, 255, 255, 0.04);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 12px;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-
-.description-title {
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #06B6D4;
-
-    text-transform: uppercase;
-
-    margin-bottom: 8px;
-
-    opacity: 0.8;
-}
-
-
-.description-text {
-    font-size: 12px;
-
-    line-height: 1.6;
-
-    color: #d4d8e8;
-
-    font-weight: 400;
-}
-
-
-/* =========================================================
-   WEBSITE SECTION
-   ========================================================= */
-
-.website-section {
-    margin-bottom: 20px;
-}
-
-
-.website-label {
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #06B6D4;
-
-    text-transform: uppercase;
-
-    margin-bottom: 10px;
-
-    opacity: 0.8;
-}
-
-
-.website-link {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(6, 182, 212, 0.10),
-            rgba(6, 182, 212, 0.05)
-        );
-
-    border:
-        1.5px solid rgba(6, 182, 212, 0.30);
-
-    border-radius: 12px;
-
-    text-decoration: none;
-
-    color: #f8f9fa;
-
-    transition:
-        all 0.3s
-        cubic-bezier(
-            0.23,
-            1,
-            0.320,
-            1
-        );
-
-    cursor: pointer;
-}
-
-
-.website-link:hover {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(6, 182, 212, 0.20),
-            rgba(6, 182, 212, 0.10)
-        );
-
-    border-color:
-        rgba(6, 182, 212, 0.50);
-
-    transform: translateX(4px);
-
-    box-shadow:
-        0 8px 24px
-        rgba(6, 182, 212, 0.20);
-}
-
-
-.website-link:active {
-    transform: translateX(2px);
-}
-
-
-.website-link:focus-visible {
-    outline:
-        2px solid #06B6D4;
-
-    outline-offset: 2px;
-}
-
-
-.website-icon {
-    font-size: 24px;
-
-    min-width: 24px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.website-content {
-    flex: 1;
-}
-
-
-.website-title {
-    font-size: 13px;
-
-    font-weight: 600;
-
-    margin-bottom: 2px;
-
-    color: #f8f9fa;
-}
-
-
-.website-url {
-    font-size: 11px;
-
-    color: #a0aec0;
-
-    word-break: break-word;
-}
-
-
-.website-arrow {
-    font-size: 18px;
-
-    color: #06B6D4;
-
-    opacity: 0.6;
-
-    transition:
-        all 0.3s ease;
-}
-
-
-.website-link:hover .website-arrow {
-    opacity: 1;
-
-    transform: translateX(4px);
-}
-
-
-/* =========================================================
-   QR CODE
-   ========================================================= */
-
-.qr-section {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    margin-bottom: 20px;
-
-    padding: 20px;
-
-    background:
-        rgba(255, 255, 255, 0.05);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.10);
-
-    border-radius: 16px;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-
-.qr-label {
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #06B6D4;
-
-    text-transform: uppercase;
-
-    margin-bottom: 12px;
-
-    opacity: 0.8;
-}
-
-
-/* QR Placeholder */
-
-.qr-code-placeholder {
-    width: 160px;
-    height: 160px;
-
-    background: #ffffff;
-
-    border:
-        2px solid #06B6D4;
-
-    border-radius: 8px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 12px;
-
-    color: #0F172A;
-
-    text-align: center;
-
-    padding: 12px;
-
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    overflow: hidden;
-}
-
-
-.qr-code-placeholder img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-
-.qr-note {
-    font-size: 9px;
-
-    color: #a0aec0;
-
-    margin-top: 8px;
-
-    text-align: center;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-    text-align: center;
-
-    padding-top: 16px;
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.10);
-}
-
-
-.footer-company {
-    font-size: 11px;
-
-    font-weight: 600;
-
-    margin-bottom: 3px;
-
-    color: #f8f9fa;
-}
-
-
-.footer-copyright {
-    font-size: 9px;
-
-    color: #64748b;
-
-    opacity: 0.7;
-}
-
-
-/* =========================================================
-   TOAST MESSAGE
-   ========================================================= */
-
-.toast {
-    position: fixed;
-
-    bottom: 20px;
-
-    left: 20px;
-    right: 20px;
-
-    background:
-        rgba(6, 182, 212, 0.90);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    color: white;
-
-    padding: 12px 16px;
-
-    border-radius: 8px;
-
-    text-align: center;
-
-    font-size: 12px;
-
-    animation:
-        toastSlideUp 0.3s ease-out;
-
-    z-index: 1000;
-}
-
-
-@keyframes toastSlideUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    /* Copy Phone / Email */
+
+    function copyToClipboard(text, label) {
+
+        navigator.clipboard.writeText(text)
+            .then(function () {
+
+                showToast(label + " copied!");
+
+            })
+            .catch(function () {
+
+                const textarea =
+                    document.createElement("textarea");
+
+                textarea.value = text;
+
+                document.body.appendChild(textarea);
+
+                textarea.select();
+
+                document.execCommand("copy");
+
+                document.body.removeChild(textarea);
+
+                showToast(label + " copied!");
+
+            });
+
     }
 
-}
 
+    /* Toast Message */
 
-/* =========================================================
-   MOBILE - 600px
-   ========================================================= */
+    function showToast(message) {
 
-@media (max-width: 600px) {
+        const toast =
+            document.createElement("div");
 
-    body {
-        padding: 12px;
+        toast.className = "toast";
+
+        toast.textContent = message;
+
+        document.body.appendChild(toast);
+
+        setTimeout(function () {
+
+            toast.classList.add("toast-hide");
+
+            setTimeout(function () {
+
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+
+            }, 300);
+
+        }, 2000);
+
     }
 
-    .card-container {
-        padding: 32px 20px;
 
-        border-radius: 20px;
+    /* Mobile Detection */
+
+    function isMobileDevice() {
+
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+            .test(navigator.userAgent);
+
     }
 
-    .name {
-        font-size: 24px;
-    }
 
-    .company-name {
-        font-size: 16px;
-    }
+    window.addEventListener("load", function () {
 
-    .contact-btn {
-        padding: 11px 12px;
+        if (isMobileDevice()) {
 
-        font-size: 10px;
-    }
-
-    .contact-grid {
-        gap: 8px;
-    }
-
-    .qr-code-placeholder {
-        width: 140px;
-        height: 140px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE - 420px
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .card-container {
-        padding: 28px 18px;
-
-        border-radius: 18px;
-    }
-
-    .name {
-        font-size: 22px;
-    }
-
-    .title {
-        font-size: 11px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-    }
-
-    .contact-btn {
-        padding: 10px 12px;
-
-        font-size: 9.5px;
-    }
-
-    .contact-info {
-        font-size: 12px;
-
-        gap: 8px;
-
-        padding: 12px;
-    }
-
-    .info-item {
-        gap: 10px;
-    }
-
-    .website-link {
-        padding: 14px;
-    }
-
-    .website-icon {
-        font-size: 20px;
-    }
-
-    .website-title {
-        font-size: 12px;
-    }
-
-    .website-url {
-        font-size: 10px;
-    }
-
-    .qr-code-placeholder {
-        width: 130px;
-        height: 130px;
-
-        font-size: 11px;
-    }
-
-    .header {
-        margin-bottom: 20px;
-
-        padding-bottom: 18px;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE - 360px
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-    .card-container {
-        padding: 24px 16px;
-    }
-
-    .name {
-        font-size: 20px;
-    }
-
-    .company-name {
-        font-size: 15px;
-    }
-
-    .contact-btn {
-        padding: 9px 10px;
-
-        font-size: 9px;
-    }
-
-    .qr-code-placeholder {
-        width: 120px;
-        height: 120px;
-
-        font-size: 10px;
-    }
-
-}
-
-
-/* =========================================================
-   DESKTOP - 1024px+
-   ========================================================= */
-
-@media (min-width: 1024px) {
-
-    body {
-        padding: 40px 20px;
-    }
-
-    .wrapper {
-        max-width: 450px;
-    }
-
-    .card-container {
-        padding: 50px 40px;
-    }
-
-    .contact-btn:hover {
-        transform: translateY(-3px);
-
-        box-shadow:
-            0 12px 32px
-            rgba(6, 182, 212, 0.30);
-    }
-
-    .name {
-        font-size: 32px;
-    }
-
-    .company-name {
-        font-size: 22px;
-    }
-
-    .contact-btn {
-        padding: 14px 18px;
-
-        font-size: 12px;
-    }
-
-    .qr-code-placeholder {
-        width: 180px;
-        height: 180px;
-    }
-
-}
-
-
-/* =========================================================
-   DARK MODE
-   ========================================================= */
-
-@media (prefers-color-scheme: dark) {
-
-    body {
-        background:
-            linear-gradient(
-                135deg,
-                #0F172A 0%,
-                #1a2847 50%,
-                #0d1b2a 100%
-            );
-    }
-
-}
-
-
-/* =========================================================
-   LIGHT MODE
-   ========================================================= */
-
-@media (prefers-color-scheme: light) {
-
-    body {
-        background:
-            linear-gradient(
-                135deg,
-                #f0f4f8 0%,
-                #d9e8f5 50%,
-                #e8f0fa 100%
+            console.log(
+                "Mobile device detected - optimized layout active"
             );
 
-        color: #0f172a;
-    }
+        }
 
-    .card-container {
-        background:
-            rgba(255, 255, 255, 0.90);
+    });
 
-        border-color:
-            rgba(6, 182, 212, 0.20);
-    }
+</script>
+```
 
-    .name {
-        background: none;
-
-        color: #1a2847;
-
-        -webkit-text-fill-color: #1a2847;
-    }
-
-    .company-name {
-        color: #1a2847;
-    }
-
-    .title {
-        color: #0891b2;
-    }
-
-    .company-logo,
-    .description-title,
-    .website-label,
-    .qr-label {
-        color: #0891b2;
-    }
-
-    .contact-btn {
-        background:
-            rgba(6, 182, 212, 0.08);
-
-        border-color:
-            rgba(6, 182, 212, 0.20);
-
-        color: #0f172a;
-    }
-
-    .contact-btn:hover {
-        background:
-            rgba(6, 182, 212, 0.15);
-
-        border-color:
-            rgba(6, 182, 212, 0.40);
-    }
-
-    .contact-info,
-    .description-section,
-    .qr-section {
-        background:
-            rgba(6, 182, 212, 0.05);
-
-        border-color:
-            rgba(6, 182, 212, 0.15);
-    }
-
-    .info-text,
-    .description-text {
-        color: #334155;
-    }
-
-    .website-link {
-        background:
-            linear-gradient(
-                135deg,
-                rgba(6, 182, 212, 0.15),
-                rgba(6, 182, 212, 0.08)
-            );
-
-        border-color:
-            rgba(6, 182, 212, 0.30);
-
-        color: #0f172a;
-    }
-
-    .website-link:hover {
-        background:
-            linear-gradient(
-                135deg,
-                rgba(6, 182, 212, 0.25),
-                rgba(6, 182, 212, 0.15)
-            );
-
-        border-color:
-            rgba(6, 182, 212, 0.50);
-    }
-
-    .website-title {
-        color: #0f172a;
-    }
-
-    .website-url {
-        color: #64748b;
-    }
-
-    .footer-company {
-        color: #1a2847;
-    }
-
-    .footer-copyright {
-        color: #78909c;
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .card-container {
-        animation: none;
-
-        opacity: 1;
-    }
-
-    .contact-btn,
-    .website-link,
-    .website-arrow {
-        transition: none;
-    }
-
-    .contact-btn:hover,
-    .website-link:hover {
-        transform: none;
-    }
-
-}
-
-
-/* =========================================================
-   PRINT
-   ========================================================= */
-
-@media print {
-
-    body {
-        background: white;
-
-        color: #000;
-
-        padding: 0;
-    }
-
-    .card-container {
-        box-shadow: none;
-
-        background: white;
-
-        border: 1px solid #ddd;
-    }
-
-    .contact-btn {
-        page-break-inside: avoid;
-
-        color: #000;
-    }
-
-}
+</body>
+</html>
